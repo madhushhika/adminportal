@@ -1,4 +1,11 @@
 import React, { Component } from "react";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import { FaCartPlus } from 'react-icons/fa';
+import Badge from 'react-bootstrap/Badge';
+import Card from 'react-bootstrap/Card';
 
 class Product extends Component {
   state = {
@@ -12,33 +19,21 @@ class Product extends Component {
 
   render() {
     return (
-      <div>
-        <div className="card" style={{ width: "18rem" }}>
-          <img src={this.props.image} className="card-img-top" alt="..."></img>
-          <div className="card-body">
-            <h5 className="card-title">{this.props.name}</h5>
-            <p className="card-text">
-              {this.props.product_description}
-            </p>
-            <button
-              onClick={this.props.onLike}
-              type="button"
-              className="btn btn-info"
-            >
-              Like{" "}
-              <span className="badge badge-light">cccc</span>
-            </button>
-            {"  "}
-            <button
-              type="button"
-              className="btn btn-danger"
-              onClick={this.props.onDelete}
-            >
-              Delete
-            </button>
-          </div>
-        </div>
-      </div>
+        <Col style={{ marginBottom: '0.8rem' }}>
+        <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src={this.props.image} />
+            <Card.Body>
+                <Card.Title>{this.props.product_name}</Card.Title>
+                <Card.Text>
+                   {this.props.product_description}
+                    <p>
+                        <Badge variant="secondary">Rs {this.props.price}</Badge>
+                    </p>
+                </Card.Text>
+                <Button variant="primary"><FaCartPlus /> Add To Cart</Button>
+            </Card.Body>
+        </Card>
+        </Col>
     );
   }
  

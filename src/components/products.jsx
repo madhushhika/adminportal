@@ -1,32 +1,36 @@
 import React, { Component } from "react";
-import Product from "./product";
-import axios from "axios";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import axios from 'axios';
+import Product from '../components/product';
+
 class Products extends Component {
-  state = {
-    allProducts: []
-  };
 
-  async componentDidMount() {
-    let { data } = await axios.get("http://localhost:5000/api/products");
-    console.log(data);
-    let productsArray = data.map(product => {
-      return {
-        product_id: product.product_id,
-        product_description: product.product_description,
-        product_name: product.product_name,
-        price: product.price,
-        image: product.image,
-      };
-    });
-    this.setState({ allProducts: productsArray });
-  }
+    state = {
+        allProducts: []
+    };
 
+    async componentDidMount() {
+        let { data } = await axios.get("http://localhost:5000/api/products");
+        console.log(data);
+        let productsArray = data.map(product => {
+          return {
+            product_id: product.product_id,
+            product_description: product.product_description,
+            product_name: product.product_name,
+            price: product.price,
+            image: product.image,
+          };
+        });
+        this.setState({ allProducts: productsArray });
+      }
+    
   render() {
     return (
-        <div className="container">
-        <h1>All Toys!!!</h1>
-        <div className="row">
-          {this.state.allProducts.map(product => (
+        <Container>
+            <h1 style={{color:"#fff"}} align="center">Products</h1>
+            <Row align="center">
+            {this.state.allProducts.map(product => (
             <div className="col-sm" key={product.product_id}>
               <Product
                 key={product.product_id}
@@ -37,9 +41,8 @@ class Products extends Component {
               />
             </div>
           ))}
-        </div>
-        <br></br><br></br>
-      </div>
+            </Row>
+        </Container>
     );
   }
 }

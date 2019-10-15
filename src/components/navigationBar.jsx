@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import FormControl from 'react-bootstrap/FormControl';
 import LogoImage from "../assets/images/logo.png";
 import { FaSearch } from 'react-icons/fa';
+import { FaShoppingCart } from 'react-icons/fa';
 
 class NavigationBar extends Component {
   render() {
@@ -31,6 +32,7 @@ class NavigationBar extends Component {
                         <NavDropdown.Item href="#actionFigures">Action Figures</NavDropdown.Item>
                     </NavDropdown>
                     <Nav.Link href="#myAccount">My Account</Nav.Link>
+                    <Nav.Link href="#cart"><FaShoppingCart /></Nav.Link>
                 </Nav>
                 <Form inline>
                     <FormControl type="text" placeholder="Search" className="mr-sm-2" />
