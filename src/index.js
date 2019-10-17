@@ -10,6 +10,7 @@ import SoftToys from './components/NavBarItems/softToys';
 import RemoteControlCars from './components/NavBarItems/remoteControlCars';
 import Dolls from './components/NavBarItems/dolls';
 import ActionFigures from './components/NavBarItems/actionFigures';
+import EditProfile from './components/editProfile';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -19,6 +20,7 @@ ReactDOM.render(
         <Route exact path="/remoteControlCars" component={RemoteControlCars} />
         <Route exact path="/dolls" component={Dolls} />
         <Route exact path="/actionFigures" component={ActionFigures} />
+        <Route exact path="/editProfile" component={EditProfile} />
         <Footer />
     </BrowserRouter>,
     document.getElementById('root')

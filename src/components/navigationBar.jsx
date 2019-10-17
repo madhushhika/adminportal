@@ -46,7 +46,13 @@ class NavigationBar extends Component {
                             <NavDropdown.Item href="/actionFigures">Action Figures</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href="#myAccount">My Account</Nav.Link>
+                        <NavDropdown title="My Account" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="/editProfile">Edit Profile</NavDropdown.Item>
+                            <NavDropdown.Item href="/editProfile">My Orders</NavDropdown.Item>
+                            <NavDropdown.Item href="/softToys">Logout</NavDropdown.Item>
+                        </NavDropdown>
                         <Nav.Link href="#cart"><FaShoppingCart /></Nav.Link>
+                        
                     </Nav>
                     <Form inline>
                         <FormControl type="text" placeholder="Search By Name" className="mr-sm-2" value={this.state.searchText} onChange={this.handleChange}/>
