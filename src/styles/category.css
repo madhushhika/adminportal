@@ -1,0 +1,47 @@
+.table-outline{
+padding: 15px;
+margin-top: 50px;
+margin-bottom: 25px;;
+}
+.Danger{
+
+    background-color: rgba(195, 11, 11, 0.924);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+}
+.modify{
+
+    background-color: rgba(34, 133, 25, 0.924);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+
+}
+.table {
+    width: 75%;
+    margin: 20px auto;
+    table-layout: auto;
+    margin-bottom:25px;
+  }
+  .table-category{
+    color: white;
+    font-size: 14px;
+  }
+  .btn-center{
+      align-items: center;
+  }
+  .section{
+    margin-top:50px;
+  }
+.ScrollStyle
+{
+    max-height: 400px;
+   
+}

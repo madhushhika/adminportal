@@ -24,7 +24,8 @@ class Products extends Component {
         });
         this.setState({ allProducts: productsArray });
       }
-    
+ 
+   
   render() {
     return (
         <Container>
